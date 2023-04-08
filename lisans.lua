@@ -1,9 +1,9 @@
--- spex#8373 Güncellemeler Yaptı                  Tarih: 08/02/2022
 -- $erhat/18#6666 Güncellemeler Yaptı             Tarih: 09/02/2022
+-- $erhat/18#6666 Güncellemeler Yaptı             Tarih: 08/04/2023
 
 
-local REDLOG = "WEBHOOK_HERE" -- LOG WEBHOOK LISANSSIZ.
-local ONAYLOG = "WEBHOOK_HERE" -- LOG WEBHOOK LISANSLI.
+local RedL0G = "WEBHOOK_HERE" -- LOG WEBHOOK LISANSSIZ.
+local OnayL0G = "WEBHOOK_HERE" -- LOG WEBHOOK LISANSLI.
 PerformHttpRequest('https://api.ipify.org', function(err, text, headers) 
   if text == 'IP_ADRESS' then -- BU ALANA LISANSLANAN IP KOYULACAK 
     print('^2 LISANS ONAYLANDI HOSGELDINIZ\n ^1- SRHT_DEVELOPMENTS -^0')
@@ -65,7 +65,7 @@ PerformHttpRequest('https://api.ipify.org', function(err, text, headers)
         },
       }
     }
-  PerformHttpRequest(REDLOG, function(err, text, headers) end, 'POST', json.encode({username = DISCORD_NAME, embeds = redlisans, avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
+  PerformHttpRequest(RedL0G, function(err, text, headers) end, 'POST', json.encode({username = DISCORD_NAME, embeds = redlisans, avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
   end  
 
 
@@ -81,5 +81,5 @@ PerformHttpRequest('https://api.ipify.org', function(err, text, headers)
           },
         }
       }
-    PerformHttpRequest(ONAYLOG, function(err, text, headers) end, 'POST', json.encode({username = DISCORD_NAME, embeds = onaylisans, avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
+    PerformHttpRequest(OnayL0G, function(err, text, headers) end, 'POST', json.encode({username = DISCORD_NAME, embeds = onaylisans, avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
     end 
